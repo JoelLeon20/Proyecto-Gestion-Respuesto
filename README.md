@@ -13,6 +13,7 @@ Proyecto académico para gestionar repuestos y pedidos en talleres.
 | `DiagramasUML`           | Diagramas de clases, casos de uso, secuencia, etc    |
 | `Arquitectura`           | Diagramas de despliegue y diseño arquitectónico      |
 | `Procesos`               | Procesos del Proyecto                                |
+| `ProyectoPDF`            | Todo el Proyecto en un PDF                           |
 
 ---
 
