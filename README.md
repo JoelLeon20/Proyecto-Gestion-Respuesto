@@ -22,9 +22,10 @@ Proyecto académico para gestionar repuestos y pedidos en talleres.
   - Diagrama de Casos de Uso  
   - Diagrama de Secuencia  
   - Documentación de Casos de Uso  
-- [Nombre 2]  
-  - 
-  - 
+- **Sebstián Allauca**  
+  - Documentación de los procesos del sistema **(en conjunto con Joel León)**
+  - Diseño arquitectónico Cliente-Servidor
+  - Diagrama UML de Estados
 - [Nombre 3]  
   - 
   - 
