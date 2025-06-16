@@ -23,13 +23,13 @@ Proyecto académico para gestionar repuestos y pedidos en talleres.
   - Diagrama de Secuencia  
   - Documentación de Casos de Uso  
 - [Nombre 2]  
-  - Diagramas de Clases  
-  - Apoyo en arquitectura
+  - 
+  - 
 - [Nombre 3]  
-  - Diagramas de Actividades  
-  - Documentación general
+  - 
+  - 
 - [Nombre 4]  
-  - Verificación y estructura del repositorio
+  - 
 
 ---
 
