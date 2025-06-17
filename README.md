@@ -30,7 +30,7 @@ Proyecto académico para gestionar repuestos y pedidos en talleres.
 - **Joseph Montesdeoca**  
   - Diagrama de Clases
   - Diagrama de Actividades
-- **Michael Olvera 
+- **Michael Olvera**
   - Diagrama de Componentes
   - Diagrama de Despliegue
   - Correcciones generales
