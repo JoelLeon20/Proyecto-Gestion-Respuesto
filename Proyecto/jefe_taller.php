@@ -1,10 +1,7 @@
 <?php
 session_start();
-// Verificamos que el usuario tenga la sesión iniciada y que sea jefe de taller.
-if (!isset($_SESSION['usuario']) || $_SESSION['rol'] !== 'jefe_taller') {
-    header('Location: login.php?usuario=jefe&intended_page=jefe_taller.php');
-    exit;
-}
+require_once 'auth_middleware.php';
+verificar_autenticacion('jefe_taller');
 $nombreUsuario = $_SESSION['usuario'];
 ?>
 <!DOCTYPE html>

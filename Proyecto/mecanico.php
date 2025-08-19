@@ -1,9 +1,7 @@
 <?php
 session_start();
-if (!isset($_SESSION['usuario']) || $_SESSION['rol'] !== 'mecanico') {
-    header('Location: login.php?usuario=mecanico&intended_page=mecanico.php');
-    exit;
-}
+require_once 'auth_middleware.php';
+verificar_autenticacion('mecanico');
 $nombreUsuario = $_SESSION['usuario'];
 ?>
 <!DOCTYPE html>

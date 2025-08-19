@@ -196,6 +196,16 @@ $titulo = $titulos[$usuario] ?? $titulos['jefe'];
           <div class="error-message">
             Las credenciales ingresadas no corresponden a un usuario de este tipo. Verifica que estés usando el formulario correcto.
           </div>
+        <?php elseif ($error == '5'): ?>
+          <!-- Added error message for session timeout -->
+          <div class="error-message">
+            Tu sesión ha expirado por inactividad. Por favor, inicia sesión nuevamente.
+          </div>
+        <?php elseif ($error == '6'): ?>
+          <!-- Added error message for invalid session token -->
+          <div class="error-message">
+            Sesión inválida detectada. Por favor, inicia sesión nuevamente.
+          </div>
         <?php endif; ?>
         
         <form action="validar_login.php" method="POST">

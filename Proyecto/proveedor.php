@@ -1,10 +1,7 @@
 <?php
 session_start();
-// Verificamos que el usuario tenga la sesión iniciada y que sea proveedor.
-if (!isset($_SESSION['usuario']) || $_SESSION['rol'] !== 'proveedor') {
-    header('Location: login.php?usuario=proveedor&intended_page=proveedor.php');
-    exit;
-}
+require_once 'auth_middleware.php';
+verificar_autenticacion('proveedor');
 $nombreUsuario = $_SESSION['usuario'];
 ?>
 <!DOCTYPE html>

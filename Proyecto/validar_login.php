@@ -1,6 +1,11 @@
 <?php
 // validar_login.php
-session_start();
+require_once 'auth_middleware.php';
+
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+}
+
 include 'conexion.php';
 
 // Obtenemos el usuario y la contraseña enviados desde el formulario
@@ -51,9 +56,7 @@ try {
             exit;
         }
         
-        // Usuario encontrado y rol correcto
-        $_SESSION['usuario'] = $fila['nombre'];
-        $_SESSION['rol']     = $fila['rol'];
+        inicializar_sesion_segura($fila['nombre'], $fila['rol']);
         
         if ($intended_page && isset($page_roles[$intended_page])) {
             $required_role = $page_roles[$intended_page];
