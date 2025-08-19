@@ -6,14 +6,20 @@ Proyecto académico para gestionar repuestos y pedidos en talleres.
 
 -Ramas del Proyecto
 
-| Rama                     | Contenido Principal                                  |
-|--------------------------|------------------------------------------------------|
-| `main`                   | Descripción general y guía del repositorio           |
-| `Documentación-Proyecto` | Documentación Caso de Uso                            |
-| `DiagramasUML`           | Diagramas de clases, casos de uso, secuencia, etc    |
-| `Arquitectura`           | Diagramas de despliegue y diseño arquitectónico      |
-| `Procesos`               | Procesos del Proyecto                                |
-| `ProyectoPDF`            | Todo el Proyecto en un PDF                           |
+## Ramas del Proyecto
+
+| Rama                     | Contenido Principal                                                                 |
+|--------------------------|--------------------------------------------------------------------------------------|
+| **main**                 | Descripción general del repositorio, guía rápida, enlaces a ramas y entregables.    |
+| **Arquitectura**         | Diseño cliente–servidor, diagramas de despliegue y componentes, decisiones ADR.     |
+| **Base-De-Datos**        | Scripts SQL (DDL/DML), migraciones, seeds/datos de prueba, diagramas ER.            |
+| **DiagramasUML**         | Casos de uso, clases, secuencia, actividades, estados (fuentes y exportables).      |
+| **Documentación-CasoDeUso** | Especificación detallada de casos de uso, flujos, reglas de negocio y pantallas. |
+| **Documentacion-Pruebas**| Plan de pruebas, casos/escenarios, resultados, colecciones Postman, notas de QA.    |
+| **Página-web**           | Código fuente de la aplicación web (PHP/JS/CSS), assets, instrucciones de ejecución.|
+| **Procesos**             | Actas, cronograma, roles, tableros, políticas de trabajo, checklist de revisiones.  |
+| **ProyectoPDF**          | Entregable final compilado en PDF (documentación integral del proyecto).            |
+
 
 ---
 
