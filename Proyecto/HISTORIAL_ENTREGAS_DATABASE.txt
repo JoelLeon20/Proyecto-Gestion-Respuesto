@@ -1,0 +1,25 @@
+# TABLA PARA HISTORIAL DE ENTREGAS
+# Sistema de Gestión de Taller Auto Motores
+
+## OPCIÓN 1: Tabla dedicada para historial de entregas (RECOMENDADA)
+
+\`\`\`sql
+CREATE TABLE historial_entregas (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    solicitud_id INTEGER NOT NULL,
+    proveedor_id INTEGER NOT NULL,
+    mecanico_id INTEGER NOT NULL,
+    repuesto_id INTEGER NOT NULL,
+    cantidad INTEGER NOT NULL,
+    fecha_solicitud DATE NOT NULL,
+    fecha_entrega DATETIME DEFAULT CURRENT_TIMESTAMP,
+    estado_anterior VARCHAR(20) NOT NULL,
+    notas TEXT,
+    entregado_por VARCHAR(100),
+    recibido_por VARCHAR(100),
+    
+    FOREIGN KEY (solicitud_id) REFERENCES solicitudes(id),
+    FOREIGN KEY (proveedor_id) REFERENCES proveedores(id),
+    FOREIGN KEY (mecanico_id) REFERENCES mecanicos(id),
+    FOREIGN KEY (repuesto_id) REFERENCES repuestos(id)
+);
