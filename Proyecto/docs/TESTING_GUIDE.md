@@ -98,8 +98,8 @@ POST http://localhost/auto-motores/tests/api_test.php?endpoint=repuestos&action=
 
 ### Paso 1: Ejecutar Pruebas
 \`\`\`bash
-# Desde el navegador
-http://localhost/auto-motores/tests/unit_tests.php
+# Desde el navegador - NUEVA IMPLEMENTACIÓN
+http://localhost/auto-motores/run_tests.php
 
 # O desde línea de comandos
 php tests/unit_tests.php
@@ -112,11 +112,52 @@ php tests/unit_tests.php
 ✗ FAIL: testDataValidation - Validación de datos falló
 \`\`\`
 
-### Cobertura de Pruebas
-- **Conexión a Base de Datos**: Verifica conectividad
-- **Autenticación**: Valida login/logout
-- **Validación de Datos**: Comprueba sanitización
-- **Operaciones CRUD**: Testa crear/leer/actualizar/eliminar
+### Cobertura de Pruebas - ACTUALIZADA
+- **Conexión a Base de Datos**: Verifica conectividad y estructura de tablas
+- **Autenticación**: Valida login/logout y roles de usuario
+- **Validación de Datos**: Comprueba sanitización y prevención de SQL injection
+- **Operaciones CRUD**: Testa crear/leer/actualizar/eliminar repuestos
+- **Lógica de Negocio**: Verifica flujos de trabajo y gestión de stock
+- **Integridad de Datos**: Comprueba consistencia de la base de datos
+
+### Nuevas Clases de Prueba Implementadas
+
+#### DatabaseTest
+- `testDatabaseConnection()`: Verifica conexión a MySQL
+- `testUsersTableExists()`: Confirma estructura de tabla usuarios
+- `testRepuestosTableExists()`: Confirma estructura de tabla repuestos
+- `testInsertAndDeleteRepuesto()`: Prueba operaciones CRUD básicas
+
+#### AuthTest
+- `testValidUserLogin()`: Valida autenticación con credenciales correctas
+- `testInvalidUserLogin()`: Verifica rechazo de credenciales incorrectas
+- `testRoleValidation()`: Confirma existencia de roles del sistema
+- `testSessionSecurity()`: Verifica funciones de seguridad de sesión
+
+#### ValidationTest
+- `testEmailValidation()`: Valida formato de emails
+- `testPasswordStrength()`: Verifica fortaleza de contraseñas
+- `testStockValidation()`: Valida números de stock
+- `testSQLInjectionPrevention()`: Detecta intentos de inyección SQL
+
+#### BusinessLogicTest
+- `testRepuestoStockManagement()`: Verifica gestión de inventario
+- `testUserRolePermissions()`: Confirma permisos por rol
+- `testWorkflowLogic()`: Valida flujos de trabajo del taller
+- `testDataIntegrity()`: Verifica integridad de datos del sistema
+
+### Ejecución Automatizada
+\`\`\`bash
+# Ejecutar desde la raíz del proyecto
+php run_tests.php
+\`\`\`
+
+El nuevo sistema de pruebas proporciona:
+- **Reporte visual HTML** con colores y estadísticas
+- **Detección automática** de métodos de prueba
+- **Manejo de excepciones** robusto
+- **Estadísticas detalladas** de éxito/fallo
+- **Guía de interpretación** integrada
 
 ## Pruebas de Usabilidad
 
