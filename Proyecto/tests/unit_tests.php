@@ -2,7 +2,7 @@
 // Unit Tests for Auto Motores System
 // Run with: php tests/unit_tests.php
 
-require_once '../conexion.php';
+require_once __DIR__ . '/../conexion.php';
 
 class AutoMotoresTest {
     private $conn;
